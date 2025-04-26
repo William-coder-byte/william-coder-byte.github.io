@@ -6,19 +6,21 @@
   <title>黃威霖的履歷</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <style>
+    /* 照片設定：放大、圓形 */
     .profile-picture img, .work-photo img {
-      width: 120px;
-      height: 120px;
+      width: 180px; /* 原本120px，改大一點 */
+      height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      border: 2px solid #ccc;
+      border: 3px solid #ccc;
     }
 
+    /* 每一塊資料排版 */
     .profile-container, .work-container {
       display: flex;
       align-items: center;
-      gap: 20px; /* 圖跟文字之間的距離 */
-      margin-bottom: 30px; /* 每塊之間的間距 */
+      gap: 30px; /* 圖跟文字間距更舒適 */
+      margin-bottom: 50px; /* 每塊之間的間距 */
     }
 
     .profile-info, .work-info {
@@ -28,8 +30,40 @@
     ul {
       padding-left: 20px;
     }
+
+    /* 讓主要區塊有一點點寬度限制，看起來不會太散 */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header, footer {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #0077cc;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>黃威霖的履歷</h1>
@@ -44,8 +78,8 @@
     </nav>
   </header>
 
-  <!-- 個人資料區 -->
-  <section id="profile">
+  <!-- 個人資料 -->
+  <section id="about">
     <div class="profile-container">
       <div class="profile-picture">
         <img src="S_1440155.jpg" alt="個人照片">
@@ -62,14 +96,26 @@
     </div>
   </section>
 
-  <!-- 第一張並排圖 -->
-  <section class="work">
+  <!-- 專業能力 -->
+  <section id="skills">
+    <h2>專業能力</h2>
+    <ul>
+      <li>會計、審計、財務報表分析</li>
+      <li>資料處理與統計分析</li>
+      <li>熟悉Excel、PowerPoint、Python基礎應用</li>
+    </ul>
+  </section>
+
+  <!-- 工作經歷：助教 -->
+  <section id="experience">
+    <h2>工作經歷</h2>
+
     <div class="work-container">
       <div class="work-photo">
         <img src="photo1.jpg" alt="助教工作照片">
       </div>
       <div class="work-info">
-        <h3>助教工作內容</h3>
+        <h3>課程助教</h3>
         <ul>
           <li>協助課程教材準備</li>
           <li>小考題目設計</li>
@@ -77,16 +123,14 @@
         </ul>
       </div>
     </div>
-  </section>
 
-  <!-- 第二張並排圖 -->
-  <section class="work">
+    <!-- 工作經歷：實習 -->
     <div class="work-container">
       <div class="work-photo">
         <img src="photo2.jpg" alt="實習工作照片">
       </div>
       <div class="work-info">
-        <h3>實習工作內容</h3>
+        <h3>會計師事務所實習</h3>
         <ul>
           <li>協助稅抽及翻憑</li>
           <li>製作查核底稿</li>
@@ -94,6 +138,23 @@
         </ul>
       </div>
     </div>
+
+  </section>
+
+  <!-- 專題研究 -->
+  <section id="projects">
+    <h2>專題研究</h2>
+    <p>目前正進行以企業併購案例分析為主題的研究，探討公司治理結構對併購成功率的影響。</p>
+  </section>
+
+  <!-- 聯絡方式 -->
+  <section id="contact">
+    <h2>聯絡方式</h2>
+    <ul>
+      <li>Email: stu990041@gmail.com</li>
+      <li>Phone: 0917-363-166</li>
+      <li>LinkedIn: <a href="#">linkedin.com/in/stu990041</a></li>
+    </ul>
   </section>
 
   <footer>
