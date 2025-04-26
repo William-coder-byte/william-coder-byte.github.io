@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -6,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>黃威霖的履歷</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .profile-picture img, .work-photo img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+    }
+
+    .profile-container, .work-container {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* 圖跟文字之間的距離 */
+      margin-bottom: 30px; /* 每塊之間的間距 */
+    }
+
+    .profile-info, .work-info {
+      flex: 1;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,10 +44,11 @@
     </nav>
   </header>
 
+  <!-- 個人資料區 -->
   <section id="profile">
     <div class="profile-container">
       <div class="profile-picture">
-        <img src="1440155.jpg" alt="個人照片" width="150">
+        <img src="S_1440155.jpg" alt="個人照片">
       </div>
       <div class="profile-info">
         <h2>個人資料</h2>
@@ -38,91 +62,38 @@
     </div>
   </section>
 
-  <section id="about">
-    <h2>關於我</h2>
-    <p>
-    您好，我是黃威霖目前就讀於台灣科技大學企業管理學系三年級，輔修財務金融學士學位學程。雖然我的主修是企管，但從我的修課記錄及背景中可以看出，我在會計、財金及資料分析等多個領域有著一定的專業知識與能力。
-
-   在大一、大二期間，我專注於相關專業能力培養，修習了多門會計、企管及財務金融的課程，同時也積極參與學術活動與社團，大部分時間我擔任的是學習者的角色。而升上大三後，我逐漸從單純的學習者轉變為學習與實踐並重的角色，開始撰寫畢業專題(航空業之範疇三碳排放與永續供應鏈關鍵影響因素探討：DEMATEL分析法應用)、大專生研究計畫書(財金新聞情緒對IPO折價幅度的影響)及參與競賽，並擔任課程助教即在會計師事務所審計部進行實習，將我過去所學到的知識加以應用與產出。
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>專業能力</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3>會計</h3>
+  <!-- 第一張並排圖 -->
+  <section class="work">
+    <div class="work-container">
+      <div class="work-photo">
+        <img src="photo1.jpg" alt="助教工作照片">
+      </div>
+      <div class="work-info">
+        <h3>助教工作內容</h3>
         <ul>
-          <li>財務會計(中級會計、高等會計)</li>
-          <li>管理會計</li>
-          <li>審計與確信</li>
+          <li>協助課程教材準備</li>
+          <li>小考題目設計</li>
+          <li>批改作業與考卷</li>
         </ul>
       </div>
-      <div class="skill-category">
-        <h3>數據分析</h3>
+    </div>
+  </section>
+
+  <!-- 第二張並排圖 -->
+  <section class="work">
+    <div class="work-container">
+      <div class="work-photo">
+        <img src="photo2.jpg" alt="實習工作照片">
+      </div>
+      <div class="work-info">
+        <h3>實習工作內容</h3>
         <ul>
-          <li>Python 數據處理</li>
-          <li>統計軟體應用: R、SPSS</li>
-          <li>機器學習應用</li>
+          <li>協助稅抽及翻憑</li>
+          <li>製作查核底稿</li>
+          <li>編制報表</li>
         </ul>
       </div>
-        </ul>
-      </div>
     </div>
-  </section>
-
-  <section id="experience">
-    <h2>工作經歷</h2>
-    <div class="experience-container">
-      <div class="experience-item">
-        <div class="experience-content">
-          <h3>台科大管理學院 - 會計學課程助教</h3>
-          <p class="experience-date">2024.09 - 2024.12</p>
-          <ul>
-            <li>協助課程教材準備</li>
-            <li>小考題目設計</li>
-            <li>批改作業與考卷</li>
-          </ul>
-        </div>
-        <div class="company-logo">
-          <img src="15508000119.jpg" alt="台科大標誌">
-        </div>
-      </div>
-      <div class="experience-item">
-        <div class="experience-content">
-          <h3>勤業眾信聯合會計師事務所 - 審計部實習生</h3>
-          <p class="experience-date">2025.01 - 現在</p>
-          <ul>
-            <li>協助稅抽及翻憑</li>
-            <li>製作查核底稿</li>
-            <li>編制報表</li>
-          </ul>
-        </div>
-        <div class="company-logo">
-          <img src="291046230.jpg" alt="勤業眾信標誌">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>專題研究</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>財金新聞情緒對IPO折價幅度的影響：BERT模型之應用</h3>
-        <p>應用自然語言處理技術分析財經新聞對IPO定價的影響。使用BERT模型進行情緒分析，探討媒體報導情緒與IPO折價程度的關聯性。研究結果顯示新聞情緒確實對IPO定價具有顯著影響。</p>
-      </div>
-      <div class="project-card">
-        <h3>航空業之範疇三碳排放與永續供應鏈關鍵影響因素探討：DEMATEL分析法應用</h3>
-        <p>運用決策實驗室分析法(DEMATEL)探討航空業供應鏈中的範疇三碳排放關鍵因素。透過專家問卷與系統性分析，找出影響永續供應鏈的重要變數，為航空業低碳轉型提供具體建議。</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>聯絡方式</h2>
-    <p>電話: <a href="tel:+886917363166">+886 917 363 166</a></p>
-    <p>Email: <a href="mailto:stu990041@gmail.com">stu990041@gmail.com</a></p>
   </section>
 
   <footer>
